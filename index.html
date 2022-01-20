@@ -43,7 +43,7 @@
         progressColor: "purple",
         barWidth: 3,
       });
-      wavesurfer.load("../assets/Bhxa-Ayla .mp3");
+      wavesurfer.load("./assets/Bhxa-Ayla .mp3");
 
       //My code
       //dom selec
@@ -56,28 +56,28 @@
       playBtn.addEventListener("click", () => {
         wavesurfer.playPause();
         if (playBtn.src.includes("play.png")) {
-          playBtn.src = "../assets/pause.png";
+          playBtn.src = "./assets/pause.png";
         } else {
-          playBtn.src = "../assets/play.png";
+          playBtn.src = "./assets/play.png";
         }
       });
       stopBtn.addEventListener("click", () => {
         wavesurfer.stop();
         if (stopBtn.src.includes("stop.png")) {
-          playBtn.src = "../assets/play.png";
+          playBtn.src = "./assets/play.png";
         }
       });
       muteBtn.addEventListener("click", () => {
         wavesurfer.toggleMute();
         if (muteBtn.src.includes("volume.png")) {
-          muteBtn.src = "../assets/mute.png";
+          muteBtn.src = "./assets/mute.png";
         } else {
-          muteBtn.src = "../assets/volume.png";
+          muteBtn.src = "./assets/volume.png";
         }
       });
 
       wavesurfer.on("finish", () => {
-        playBtn.src = "../assets/play.png";
+        playBtn.src = "./assets/play.png";
         wavesurfer.stop();
       });
     </script>
